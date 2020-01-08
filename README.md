@@ -7,21 +7,21 @@
 You can use the function ``initSerial()`` to initialize send and receive serial ports with arguments ``TX`` and ``Rx``.
 
 ```block
-HANSHIN_IOT .initSerial(TX,RX)
+HANSHIN_IOT.initSerial(TX,RX)
 ```
 
 ### Connecting to WIFI
 You can use the function ``setWifiInfo()`` to connect to WIFI with arguments WIFI ``name`` and ``password`` of type string.
 
 ```block
-HANSHIN_IOT .setWifiInfo(name,password)
+HANSHIN_IOT.setWifiInfo(name,password)
 ```
 
 ### Triggling event
 You can use the function ``triggerEvent()`` to triggle the specific event with arguments ``key`` and ``event``.
 
 ```block
-HANSHIN_IOT .triggerEvent(key,event)
+HANSHIN_IOT.triggerEvent(key,event)
 ```
 
 ## License
