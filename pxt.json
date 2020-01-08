@@ -1,19 +1,20 @@
 {
     "name": "hanshin_iot",
-    "version": "0.0.0",
-    "description": "",
+    "version": "1.0.0",
+    "description": "HANSHIN IOT",
+    "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "main.ts",
+        "_locales/zh-cn/hanshin_iot-strings.json",
+        "_locales/zh-tw/hanshin_iot-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "public": true,
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
