@@ -1,4 +1,4 @@
-// % weight=10 color=#1E90FF icon="\uf136"
+//% weight=10 color=#1E90FF icon="\uf136"
 namespace HANSHIN_IOT {
     let buffer = ""
 
