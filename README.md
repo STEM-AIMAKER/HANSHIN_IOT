@@ -17,14 +17,14 @@ You can use the function ``setWifiInfo()`` to connect to WIFI with arguments WIF
 HANSHIN_IOT .setWifiInfo(name,password)
 ```
 
-### Connecting to WIFI
+### Triggling event
 You can use the function ``triggerEvent()`` to triggle the specific event with arguments ``key`` and ``event``.
 
 ```block
 HANSHIN_IOT .triggerEvent(key,event)
 ```
 
-### License
+## License
 MIT
 
 
