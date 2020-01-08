@@ -24,12 +24,12 @@ You can use the function ``triggerEvent()`` to triggle the specific event with a
 HANSHIN_IOT.triggerEvent(key,event)
 ```
 
+## Link
+If some errors occurred, you will need to search for it using the full Github repo URL. eg: https://github.com/stem-hanshin/HANSHIN_IOT
 ## License
 MIT
-
 
 ## Supported targets
 
 * for PXT/microbit
 (The metadata above is needed for package search.)
-
