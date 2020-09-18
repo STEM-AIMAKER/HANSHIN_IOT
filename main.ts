@@ -13,6 +13,13 @@ namespace HANSHIN_IOT {
         basic.pause(100)
     }
     
+    
+    //% blockId=connectIOTServer block="Connect to IOT Server, |ip=%ip"
+    export function connectIOTServer(ip: string): void {
+        let connectCmd = "AT+CIPSTART=\"TCP\",\"" + ip +"\",5566"
+        serial.writeString(connectCmd)
+    }  
+    
     //% blockId=turnOnIO block="Turn on io, |io Index=%ioIndex"
     export function turnOnIO(ioIndex: int): void {
         let ioCmd = "io,1," + ioIndex
@@ -27,6 +34,8 @@ namespace HANSHIN_IOT {
     
     //% blockId=setWifiInfo block="Connect to WIFI, |SSID=%name Password=%password"
     export function setWifiInfo(name: string, password: string): void {
+        serial.writeString("AT+CWMODE=3")
+        basic.pause(200)        
         let cmd = "AT+CWJAP=\"" + name + "\",\"" + password + "\""
         serial.writeString(cmd)
         buffer = serial.readString()
