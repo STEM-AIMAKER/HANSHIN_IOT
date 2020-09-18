@@ -21,13 +21,13 @@ namespace HANSHIN_IOT {
     }  
     
     //% blockId=turnOnIO block="Turn on io, |io Index=%ioIndex"
-    export function turnOnIO(ioIndex: int): void {
+    export function turnOnIO(ioIndex: string): void {
         let ioCmd = "io,1," + ioIndex
         serial.writeString(ioCmd)
     }
     
     //% blockId=turnOffIO block="Turn off io, |io Index=%ioIndex"
-    export function turnOffIO(ioIndex: int): void {
+    export function turnOffIO(ioIndex: string): void {
         let ioCmd = "io,0," + ioIndex
         serial.writeString(ioCmd)
     }
