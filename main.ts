@@ -18,6 +18,8 @@ namespace HANSHIN_IOT {
     export function connectIOTServer(ip: string): void {
         let connectCmd = "AT+CIPSTART=\"TCP\",\"" + ip +"\",5566"
         serial.writeString(connectCmd)
+        basic.pause(2000)
+        serial.writeString("AT+CIPSEND")
     }  
     
     //% blockId=turnOnIO block="Turn on io, |io Index=%ioIndex"
