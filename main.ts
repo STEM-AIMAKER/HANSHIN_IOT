@@ -19,6 +19,8 @@ namespace HANSHIN_IOT {
         let connectCmd = "AT+CIPSTART=\"TCP\",\"" + ip +"\",5566"
         serial.writeString(connectCmd)
         basic.pause(2000)
+        serial.writeString("AT+CIPMODE=1")
+        basic.pause(2000)
         serial.writeString("AT+CIPSEND")
     }  
     
