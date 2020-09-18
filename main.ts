@@ -12,7 +12,18 @@ namespace HANSHIN_IOT {
         serial.writeString("AT")
         basic.pause(100)
     }
-
+    
+    //% blockId=turnOnIO block="Turn on io, |io Index=%ioIndex"
+    export function turnOnIO(ioIndex: int): void {
+        let ioCmd = "io,1," + ioIndex
+        serial.writeString(ioCmd)
+    }
+    
+    //% blockId=turnOffIO block="Turn off io, |io Index=%ioIndex"
+    export function turnOffIO(ioIndex: int): void {
+        let ioCmd = "io,0," + ioIndex
+        serial.writeString(ioCmd)
+    }
     
     //% blockId=setWifiInfo block="Connect to WIFI, |SSID=%name Password=%password"
     export function setWifiInfo(name: string, password: string): void {
