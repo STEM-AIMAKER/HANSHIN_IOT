@@ -2,22 +2,7 @@
 namespace HANSHIN_IOT {
     let buffer = ""
 
-       export enum CurtainIndex {
-        //% blockId="First" block="First"
-        First = 0,
-        //% blockId="Second" block="Second"
-        Second = 1,
-        //% blockId="Third" block="Third"
-        Third=2,
-        //% blockId="Fourth" block="Fourth"
-        Fourth=3,
-        //% blockId="Fifth" block="Fifth"
-        Fifth=4,
-        //% blockId="ALL" block="All"
-        ALL=100
-    }
-
-    
+       
     //% blockId=initSerial block="Init serial port to |TX = %Tx RX=%RX"
     //% Tx.fieldEditor="gridpicker" Tx.fieldOptions.columns=4
     //% Rx.fieldEditor="gridpicker" Rx.fieldOptions.columns=4
@@ -28,42 +13,7 @@ namespace HANSHIN_IOT {
         serial.writeString("AT")
         basic.pause(100)
     }
-    
-    
-    //% blockId=connectIOTServer block="Connect to IOT Server, |ip=%ip"
-    export function connectIOTServer(ip: string): void {
-        let connectCmd = "AT+CIPSTART=\"TCP\",\"" + ip +"\",5566"
-        serial.writeString(connectCmd)
-        basic.pause(200)
-        serial.writeString("AT+CIPMODE=1")
-        basic.pause(200)
-        serial.writeString("AT+CIPSEND")
-    }  
-    
-    //% blockId=raiseCurtain block="Raise Curtain |index=%index"
-    export function raiseCurtain(index: CurtainIndex) : void {
-        let ctCmd = "ct,0," + index
-        serial.writeString(ctCmd)
-    }
-    
-    //% blockId=lowCurtain block="Low Curtain |index=%index"
-    export function lowCurtain(index: CurtainIndex) : void {
-        let ctCmd = "ct,1," + index
-        serial.writeString(ctCmd)
-    }
-    
-    //% blockId=turnOnIO block="Turn on io, |io Index=%ioIndex"
-    export function turnOnIO(ioIndex: string): void {
-        let ioCmd = "io,1," + ioIndex
-        serial.writeString(ioCmd)
-    }
-    
-    //% blockId=turnOffIO block="Turn off io, |io Index=%ioIndex"
-    export function turnOffIO(ioIndex: string): void {
-        let ioCmd = "io,0," + ioIndex
-        serial.writeString(ioCmd)
-    }
-    
+         
     //% blockId=setWifiInfo block="Connect to WIFI, |SSID=%name Password=%password"
     export function setWifiInfo(name: string, password: string): void {
         serial.writeString("AT+CWMODE=3")
