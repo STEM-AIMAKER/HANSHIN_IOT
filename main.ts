@@ -3,7 +3,7 @@ namespace HANSHIN_IOT {
     let buffer = ""
 
        
-    //% blockId=initSerial block="Init serial port to |TX = %Tx RX=%RX"
+    //% blockId=initSerial block="Init serial port to |TX= %Tx RX=%RX"
     //% Tx.fieldEditor="gridpicker" Tx.fieldOptions.columns=4
     //% Rx.fieldEditor="gridpicker" Rx.fieldOptions.columns=4
     export function initSerial(Tx: SerialPin, Rx: SerialPin): void {
