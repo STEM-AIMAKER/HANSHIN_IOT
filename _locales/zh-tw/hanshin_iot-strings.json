@@ -1,5 +1,5 @@
 {
   "HANSHIN_IOT.initSerial|block":"初始化串口|發送= %Tx 接收=%RX",
   "HANSHIN_IOT.setWifiInfo|block":"設定WIFI連接|SSID=%name 密碼=%password",
-  "HANSHIN_IOT.triggerEvent|block":"觸發事件|按鍵=%key 事件=%event"
+  "HANSHIN_IOT.triggerEvent|block":"觸發事件|金鑰=%key 事件=%event"
 }
