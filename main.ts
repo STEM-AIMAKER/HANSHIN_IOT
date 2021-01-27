@@ -31,5 +31,14 @@ namespace HANSHIN_IOT {
         buffer = serial.readString()
         basic.pause(6000)
     }
+    
+    //% blockId=triggerThingSpeakEvent block="Trigger thing speak event, |key=%key field=%field value=%value"
+    //% field.min=1 field.defl=1
+    export function triggerThingSpeakEvent(key: string, field:number, value: string): void {
+        let cmd2 = "https://api.thingspeak.com/update?api_key=" + key + "&field" + field +"=" + value
+        serial.writeString(cmd2)
+        buffer = serial.readString()
+        basic.pause(6000)
+    }
 
 }
